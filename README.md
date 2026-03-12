@@ -1,3 +1,81 @@
+# Tip Calculator – Compose Multiplatform
+
+Aplicación de escritorio desarrollada en **Kotlin utilizando Compose Multiplatform** que permite calcular el monto de una propina a partir del total de una cuenta y un porcentaje definido por el usuario.
+
+La aplicación utiliza una arquitectura **MVVM (Model – View – ViewModel)** para separar la lógica de negocio de la interfaz de usuario y emplea **StateFlow** para manejar el estado de forma reactiva.
+
+---
+
+## Características
+
+- Cálculo automático de propinas
+- Entrada del monto de la cuenta
+- Configuración del porcentaje de propina
+- Opción para redondear la propina
+- Actualización automática del resultado
+- Interfaz moderna basada en **Material Design 3**
+
+---
+
+## Tecnologías utilizadas
+
+- **Kotlin**
+- **Compose Multiplatform**
+- **Compose for Desktop**
+- **Material Design 3**
+- **StateFlow**
+- **ViewModel**
+- **Arquitectura MVVM**
+
+---
+
+## Arquitectura del proyecto
+
+La aplicación sigue el patrón **MVVM** para organizar el código:
+
+### View
+La interfaz de usuario está implementada con **Jetpack Compose**, específicamente en el composable:
+
+
+---
+
+### ViewModel
+El **TipCalculatorViewModel** maneja:
+
+- la lógica de cálculo de la propina
+- los eventos de la interfaz
+- la gestión del estado de la aplicación
+
+El estado se expone mediante **StateFlow**, permitiendo que la interfaz se actualice automáticamente.
+
+---
+
+### UI State
+El estado de la interfaz se modela con la data class:
+
+
+TipUiState
+
+
+Esta clase contiene:
+
+- monto de la cuenta
+- porcentaje de propina
+- opción de redondeo
+- resultado calculado
+
+---
+
+## Funcionamiento
+
+1. El usuario introduce el **monto de la cuenta**.
+2. Define el **porcentaje de propina**.
+3. Opcionalmente activa el **redondeo de la propina**.
+4. El **ViewModel procesa los datos**.
+5. El resultado se muestra automáticamente en la interfaz.
+
+---
+
 This is a Kotlin Multiplatform project targeting Android, iOS, Web, Desktop (JVM).
 
 * [/composeApp](./composeApp/src) is for code that will be shared across your Compose Multiplatform applications.
