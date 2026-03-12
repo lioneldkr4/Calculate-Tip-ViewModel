@@ -44,9 +44,9 @@ fun TipCalculatorScreen(
     // DisposableEffect permite ejecutar código al entrar y salir
     // de la composición. Útil para logging educativo.
     DisposableEffect(Unit) {
-        println("[TipCalculatorScreen] ▶️  Composable ENTRANDO en composición")
+        println("[TipCalculatorScreen] Composable ENTRANDO en composición")
         onDispose {
-            println("[TipCalculatorScreen] ⏹️  Composable SALIENDO de composición")
+            println("[TipCalculatorScreen] Composable SALIENDO de composición")
         }
     }
 

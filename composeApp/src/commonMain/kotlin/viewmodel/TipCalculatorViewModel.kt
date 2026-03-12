@@ -30,7 +30,7 @@ class TipCalculatorViewModel : ViewModel() {
 
     // ── Inicialización ────────────────────────────────────────
     init {
-        println("[TipCalculatorViewModel] ✅ ViewModel CREADO - " +
+        println("[TipCalculatorViewModel] ViewModel CREADO - " +
                 "instancia: ${hashCode()}")
         // Calcular estado inicial con valores por defecto
         recalculateTip()
@@ -81,7 +81,7 @@ class TipCalculatorViewModel : ViewModel() {
      *  3. Si roundUp == true: tip = ceil(tip)
      *  4. Formatear el resultado como string con símbolo $
      *
-     * Este método es privado: la UI nunca lo llama directamente,
+     * Este metodo es privado: la UI nunca lo llama directamente,
      * sino que lo dispara indirectamente mediante los métodos on*.
      */
     private fun recalculateTip() {
@@ -136,7 +136,7 @@ class TipCalculatorViewModel : ViewModel() {
      */
     override fun onCleared() {
         super.onCleared()
-        println("[TipCalculatorViewModel] 🗑️  onCleared() - " +
+        println("[TipCalculatorViewModel]  onCleared() - " +
                 "ViewModel DESTRUIDO - instancia: ${hashCode()}")
         println("[TipCalculatorViewModel] Los recursos han sido liberados.")
     }

@@ -11,12 +11,12 @@ import androidx.compose.ui.Modifier
 import ui.TipCalculatorScreen
 
 /**
- * Activity única de la aplicación Android.
+ * Activity única de la aplicacion Android.
  *
- * Delega todo el renderizado a Compose a través de setContent {}.
+ * Delega todo el renderizado a Compose a traves de setContent {}.
  * El ViewModel es creado/recuperado por viewModel() dentro de
  * TipCalculatorScreen, usando esta Activity como
- * ViewModelStoreOwner automáticamente.
+ * ViewModelStoreOwner automaticamente.
  */
 class MainActivity : ComponentActivity() {
 

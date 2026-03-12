@@ -14,7 +14,7 @@ import ui.TipCalculatorScreen
  * vida de la ventana.
  */
 fun main() {
-    println("[Main] 🚀 Iniciando aplicación Desktop - Tip Calculator")
+    println("[Main] Iniciando aplicación Desktop - Tip Calculator")
 
     application {
         // Estado de la ventana (tamaño, posición)
@@ -28,7 +28,7 @@ fun main() {
                 // Este lambda se ejecuta al presionar la X de la ventana.
                 // Compose destruirá el ViewModelStoreOwner de esta Window,
                 // lo que a su vez llamará onCleared() del ViewModel.
-                println("[Main] 🪟 Ventana cerrándose - " +
+                println("[Main] Ventana cerrándose - " +
                         "el ViewModel será destruido tras onCloseRequest")
                 exitApplication()
             },
@@ -46,5 +46,5 @@ fun main() {
         }
     }
 
-    println("[Main] 👋 Aplicación Desktop finalizada")
+    println("[Main] Aplicación Desktop finalizada")
 }
