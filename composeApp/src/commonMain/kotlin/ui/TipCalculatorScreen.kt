@@ -20,29 +20,16 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import viewmodel.TipCalculatorViewModel
 
-/**
- * Pantalla principal de la calculadora de propinas.
- *
- * @param viewModel Instancia del ViewModel inyectada por Compose.
- *                  viewModel() garantiza una sola instancia por
- *                  ViewModelStoreOwner (Activity / Window).
- */
+
 @Composable
 fun TipCalculatorScreen(
     viewModel: TipCalculatorViewModel = viewModel { TipCalculatorViewModel() }
 ) {
-    // ── Observar el estado del ViewModel ─────────────────────
-    // collectAsState() suscribe este composable al StateFlow.
-    // Cada vez que uiState cambia, Compose recompone solo las
-    // partes que leen los valores modificados.
+
     val uiState by viewModel.uiState.collectAsState()
 
-    // FocusManager para ocultar el teclado al presionar "Done"
     val focusManager = LocalFocusManager.current
 
-    // ── Efecto didáctico de composición ──────────────────────
-    // DisposableEffect permite ejecutar código al entrar y salir
-    // de la composición. Útil para logging educativo.
     DisposableEffect(Unit) {
         println("[TipCalculatorScreen] Composable ENTRANDO en composición")
         onDispose {
@@ -50,7 +37,6 @@ fun TipCalculatorScreen(
         }
     }
 
-    // ── Árbol de UI ──────────────────────────────────────────
     Surface(
         modifier = Modifier.fillMaxSize(),
         color = MaterialTheme.colorScheme.background
@@ -133,12 +119,8 @@ fun TipCalculatorScreen(
     }
 }
 
-// ── Componentes auxiliares ────────────────────────────────────
 
-/**
- * Fila con etiqueta y Switch para activar el redondeo.
- * Extraída en un composable propio para mayor legibilidad.
- */
+
 @Composable
 private fun RoundUpRow(
     roundUp: Boolean,
@@ -160,9 +142,7 @@ private fun RoundUpRow(
     }
 }
 
-/**
- * Fila que muestra la etiqueta "Tip Amount" y el valor calculado.
- */
+
 @Composable
 private fun TipResultRow(tipResult: String) {
     Row(
