@@ -10,34 +10,23 @@ import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import ui.TipCalculatorScreen
 
-/**
- * Activity única de la aplicacion Android.
- *
- * Delega todo el renderizado a Compose a traves de setContent {}.
- * El ViewModel es creado/recuperado por viewModel() dentro de
- * TipCalculatorScreen, usando esta Activity como
- * ViewModelStoreOwner automaticamente.
- */
+
 class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // Habilitar diseño edge-to-edge (sin barras de sistema visibles)
         enableEdgeToEdge()
 
         println("[MainActivity] onCreate() - la Activity fue creada/recreada")
 
         setContent {
-            // MaterialTheme aplica el tema de Material Design 3
             MaterialTheme {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    // TipCalculatorScreen está definida en commonMain.
-                    // Aquí se reutiliza la pantalla idéntica a Desktop.
-                    // viewModel() usará esta Activity como owner.
+
                     TipCalculatorScreen()
                 }
             }

@@ -120,7 +120,6 @@ fun TipCalculatorScreen(
 }
 
 
-
 @Composable
 private fun RoundUpRow(
     roundUp: Boolean,

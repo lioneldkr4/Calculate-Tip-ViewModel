@@ -6,7 +6,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
-import kotlin.math.floor
+import kotlin.math.round
 
 
 class TipCalculatorViewModel : ViewModel() {
@@ -53,7 +53,7 @@ class TipCalculatorViewModel : ViewModel() {
         var tip = bill * (percentage / 100.0)
 
         if (state.roundUp) {
-            tip = floor(tip)
+            tip = round(tip)
         }
 
         val formattedTip = formatCurrency(tip)

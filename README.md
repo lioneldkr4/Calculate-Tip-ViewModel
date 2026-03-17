@@ -74,7 +74,7 @@ Esta clase contiene:
 4. El **ViewModel procesa los datos**.
 5. El resultado se muestra automáticamente en la interfaz.
 
----
+----------------------------
 
 This is a Kotlin Multiplatform project targeting Android, iOS, Web, Desktop (JVM).
 
